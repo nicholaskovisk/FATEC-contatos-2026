@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="./app.js" defer type="module"></script>
     <title>Contatos</title>
 </head>
 <body>
-    
+    <header>
+    <h1>Lista de Contatos</h1>
+</header>
+
+<main>
+
+    <section class="formulario">
+        <h2>Cadastrar Contato</h2>
+
+        <form id="form-contato">
+
+            <input type="hidden" id="contato-id">
+
+            <input type="text" id="nome" placeholder="Nome" required>
+
+            <input type="text" id="celular" placeholder="Celular" required>
+
+            <input type="url" id="foto" placeholder="URL da Foto" required>
+
+            <input type="email" id="email" placeholder="Email" required>
+
+            <input type="text" id="endereco" placeholder="Endereço" required>
+
+            <input type="text" id="cidade" placeholder="Cidade" required>
+
+            <div class="botoes-formulario">
+                <button type="submit">Salvar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="lista-contatos">
+        <h2>Contatos</h2>
+
+        <div id="contatos-container"></div>
+    </section>
+
+</main>
 </body>
 </html>
