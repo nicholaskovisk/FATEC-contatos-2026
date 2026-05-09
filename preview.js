@@ -21,3 +21,24 @@ function preview({ target }) {
 }
 
 inputImagem.addEventListener('change', preview)
+
+// Cria a área da imagem na direita
+const painelPreview = document.createElement("div");
+
+painelPreview.id = "painel-preview";
+
+painelPreview.innerHTML = `
+    <img id="imagem-preview" src="" alt="Preview">
+`;
+
+document.body.appendChild(painelPreview);
+
+
+// Função global para trocar a imagem
+window.mostrarPreview = function(nomeImagem){
+
+    const imagem = document.getElementById("imagem-preview");
+
+    // abre automaticamente a pasta img
+    imagem.src = `img/${nomeImagem}`;
+}

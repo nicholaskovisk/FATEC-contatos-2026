@@ -47,6 +47,7 @@ function criarCard(contato){
     
         <img 
     src="${contato.foto || './img/sem-imagem.png'}" 
+    onclick="mostrarPreview('${contato.imagem}')"
     alt="${contato.nome}"
     onerror="this.src='./img/sem-imagem.png'"
 >
