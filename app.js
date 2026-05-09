@@ -6,6 +6,9 @@ import {
     deletarContato
 } from "./contatos.js"
 
+import "./preview.js"
+
+
 const contatosContainer = document.getElementById("contatos-container")
 const form = document.getElementById("form-contato")
 
@@ -42,7 +45,11 @@ function criarCard(contato){
 
     card.innerHTML = `
     
-        <img src="${contato.foto}" alt="${contato.nome}">
+        <img 
+    src="${contato.foto || './img/sem-imagem.png'}" 
+    alt="${contato.nome}"
+    onerror="this.src='./img/sem-imagem.png'"
+>
 
         <h3>${contato.nome}</h3>
 
